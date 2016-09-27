@@ -1,0 +1,46 @@
+// Place all the styles related to the Main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  font-family: Cambria;
+}
+h1{
+  size:200%;
+}
+h2{
+  font-family: Cambria;
+  color:#cc0000;
+  font-size:160%;
+}
+table{
+  table-layout:fixed;
+
+}
+div{
+  background-color:#D2E0ED;
+  width: 800px;
+}
+tr{
+
+}
+p .redtitle {
+    font-family: Cambria;
+    color:#cc0000;
+    font-size:160%;
+}
+table,th,td {
+  border-collapse: collapse;
+  border: 1px solid grey;
+  border-spacing:8px;
+
+}
+td{
+  height: 100px;
+}
+th {
+  font-style:bold;
+  text-align:left;
+  width:150px;
+  height:40px;
+}

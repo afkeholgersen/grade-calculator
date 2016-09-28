@@ -2,57 +2,73 @@
 <html>
 <head>
   <link rel="stylesheet" href="application.css">
+  <script type="text/javascript" src="application.js" ></script>
 </head>
 
 <title>Grade Calculator</title>
-<h1>Grade Calculator</h1>
-<div id="grey">
-  <h2>Activites</h2>
 
-  <p>Give grades to the numeric activities</p>
 
-  <table>
-    <tr >
-      <th>Name</th>
-      <th>Short Name</th>
-      <th>Weight</th>
-      <th>Grade</th>
-      <th>Percent</th>
-    </tr>
-    <tr>
-      <td>Activity 1</td>
-      <td>A1</td>
-      <td>
-        <input type="number" name="weight1"><br>
-      </td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Activity 2</td>
-      <td>A2</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Activity 3</td>
-      <td>A3</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Activity 4</td>
-      <td>A4</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <p class="redtitle">Result</p>
+<div id="layer3">
+  <div id="layer2">
+    <h1>Grade Calculator</h1>
+    <div id="layer1">
+      <p class="redtitle">Activites</h2>
+
+      <p class="regular">Give grades to the numeric activities</p>
+
+      <table id="gradetable">
+        <tr >
+          <th>Name</th>
+          <th>Short Name</th>
+          <th>Weight</th>
+          <th>Grade</th>
+          <th>Percent</th>
+        </tr>
+        <tr>
+          <td>Activity 1</td>
+          <td>A1</td>
+          <td>
+            <input type="number" name="weight1" height="50px" width="50px"><br>
+          </td>
+          <td>
+            <input type="number" name="grade1num" height="30px" width="50px"><br>
+            <p> /</p><br>
+            <input type="number" name="grade1num" height="30px" width="50px"><br>
+
+          </td>
+          <td></td>
+        </tr>
+      </table>
+      <button type="submit" class="redbutton" id="addrow" onclick="addRow(gradetable)" value="Add Row">Add Row</button>
+
+      <p class="redtitle">Result</p>
+      <button class="redbutton" id="weighted">WEIGHTED</button>
+      <button class="redbutton" id="mean">MEAN</button>
+
+    </div>
+  </div>
 </div>
 
 
 
-
 </html>
+<script>
+function addRow(tableID){
+  var table= document.getElementByID(tableID);
+  var rowCount=table.rows.length;
+
+
+  var row=table.insertRow(rowCount);
+
+  var name=row.insertCell(0);
+  var nametext= "Activity ".concat(rowCount);
+
+  var short=row.insertCell(1);
+  var shorttext= "A ".concat(rowCount);
+
+
+  var weight=row.insertCell(2);
+  var grade=row.insertCell(3);
+  var percent=row.insertCell(4);
+}
+</script>

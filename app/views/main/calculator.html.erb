@@ -2,7 +2,7 @@
 <html>
 <head>
   <link rel="stylesheet" href="application.css">
-  <script type="text/javascript" src="application.js" ></script>
+  <script src="application.js" type="text/javascript"></script>
 </head>
 
 <title>Grade Calculator</title>
@@ -17,58 +17,36 @@
       <p class="regular">Give grades to the numeric activities</p>
 
       <table id="gradetable">
-        <tr >
+        <tr id="headerrow">
           <th>Name</th>
           <th>Short Name</th>
           <th>Weight</th>
           <th>Grade</th>
           <th>Percent</th>
         </tr>
-        <tr>
-          <td>Activity 1</td>
-          <td>A1</td>
-          <td>
-            <input type="number" name="weight1" height="50px" width="50px"><br>
-          </td>
-          <td>
-            <input type="number" name="grade1num" height="30px" width="50px"><br>
-            <p> /</p><br>
-            <input type="number" name="grade1num" height="30px" width="50px"><br>
-
-          </td>
-          <td></td>
+        <tr id='row1'>
+          <td id='Activity1'>Activity 1</td>
+          <td id='a1'>A1</td>
+          <td id='Weight1'><input type='number' id='weightInput1' class='num'></td>
+          <td><input type='number' id='gradeNum1' name='gradeNum1' class='num' onchange="calculatePercent(1)"> <p>/</p> <input type='number' id='gradeDen1' name='gradeDen1' class='num' onchange="calculatePercent(1)"></td>
+          <td id='percent1'></td>
         </tr>
       </table>
-      <button type="submit" class="redbutton" id="addrow" onclick="addRow(gradetable)" value="Add Row">Add Row</button>
+
+      <button type="button" class="redbutton" id="addrow" onclick="addRow()">ADD ROW</button>
+      <button type="button" class="redbutton" id="deleterow" onclick="deleteRow()">DELETE ROW</button>
 
       <p class="redtitle">Result</p>
-      <button class="redbutton" id="weighted">WEIGHTED</button>
-      <button class="redbutton" id="mean">MEAN</button>
+      <p id="result"></p>
 
+      <button class="redbutton" id="weighted" onclick='weightedCalculation()' style="position:absolute; right:300px;">WEIGHTED</button>
+      <button class="redbutton" id="mean" onclick='meanCalculation()' style="position:absolute; right:190px;">MEAN</button>
+      <br>
     </div>
+    <br>
   </div>
 </div>
 
 
 
 </html>
-<script>
-function addRow(tableID){
-  var table= document.getElementByID(tableID);
-  var rowCount=table.rows.length;
-
-
-  var row=table.insertRow(rowCount);
-
-  var name=row.insertCell(0);
-  var nametext= "Activity ".concat(rowCount);
-
-  var short=row.insertCell(1);
-  var shorttext= "A ".concat(rowCount);
-
-
-  var weight=row.insertCell(2);
-  var grade=row.insertCell(3);
-  var percent=row.insertCell(4);
-}
-</script>

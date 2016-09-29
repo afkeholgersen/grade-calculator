@@ -2,72 +2,98 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
 body{
   font-family: Cambria;
+  background-color:#AA1D24;
 }
 h1{
   size:200%;
+  font-family:Calibri;
 }
 h2{
   font-family: Cambria;
-  color:#cc0000;
+  color:#AA1D24;
   font-size:160%;
 }
 table{
   table-layout:fixed;
 
 }
+
 #layer2{
   background-color:white;
-  width:1200px;
-  height:1400px;
+  width:1000px;
   position:relative;
-  left:30px;
-  border:1px solid black;
-  border-right:0px;
-  border-left:0px;
-  border-top:10px;
-  border-bottom:15px;
-  padding:30px;
+  top:20%;
+  left:8%;;
+  border-top:10px solid black;
+  border-bottom:20px solid black;
+  padding:20px;
+  z-index:2;
+  float:left;
 
 }
 #layer1{
   background-color:#E8EEF0;
-  width: 800px;
-  top:20px;
+  width: 80%;
+  //top:20px;
+  padding:20px;
+  top:100px;
+  float:left;
+  margin: 10px;
 
-  position:relative;
+
 }
 #layer3{
-  background-color:#cc0000;
-  position:relative;
+  background-color:#AA1D24;
   top:0px;
-  margin-left:auto;
+  left:0px;
+  position:relative;
+  width:100%;
+  height:100%;
+  margin:0 auto;
+  overflow:scroll;
+  padding-bottom:30px;
 }
 
 p.redtitle {
     font-family: Cambria;
-    color:#cc0000;
+    color:#AA1D24;
     font-size:130%;
     font-style:bold;
     font-weight:bolder;
     position:static;
-    align:left;
-}
-p.regular {
-  
 }
 table,th,td {
   border-collapse: collapse;
   border: 1px solid grey;
-  border-spacing:8px;
 
 }
 td{
-  height: 100px;
+  height: 90px;
+  padding: 5px;
 }
 th {
   font-style:bold;
   width:150px;
   height:40px;
+}
+button.redbutton{
+  font-size:80%;
+  color: white;
+  background-color:#AA1D24;
+  border-radius:5px;
+  position:relative;
+  width:105px;
+  height:30px;
+}
+button.redbutton:hover{
+  background-color: black;
+}
+
+input.num{
+  height:30px;
+  width: 110px;
 }

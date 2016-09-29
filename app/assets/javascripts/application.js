@@ -20,7 +20,7 @@ function addRow(){
 
   var rowCount=table.rows.length;
        console.log(rowCount);
-   var row = table.insertRow(rowCount).outerHTML="<tr id='row"+rowCount+"'><td id='Activity"+rowCount+"'>Activity "+rowCount+"</td><td id='a"+rowCount+"'>A"+rowCount+"</td><td id='Weight"+rowCount+"'><input type='number' id='weightInput"+rowCount+"' class='num' ></td><td><input type='number' id='gradeNum"+rowCount+"' name='gradeNum"+rowCount+"' class='num' onchange='calculatePercent("+rowCount+")'> <p>/</p> <input type='number' name='gradeDen"+rowCount+"' id='gradeDen"+rowCount+"' class='num' onchange='calculatePercent("+rowCount+")'></td><td id='percent"+rowCount+"'></td></tr>";
+   var row = table.insertRow(rowCount).outerHTML="<tr id='row"+rowCount+"'><td id='Activity"+rowCount+"'>Activity "+rowCount+"</td><td id='a"+rowCount+"'>A"+rowCount+"</td><td id='Weight"+rowCount+"'><input type='number' id='weightInput"+rowCount+"' class='num' ></td><td><input type='number' id='gradeNum"+rowCount+"' name='gradeNum"+rowCount+"' class='num' onchange='calculatePercent("+rowCount+")'> <p style='display:inline-block'>/</p> <input type='number' name='gradeDen"+rowCount+"' id='gradeDen"+rowCount+"' class='num' onchange='calculatePercent("+rowCount+")'></td><td id='percent"+rowCount+"'></td></tr>";
 }
 function deleteRow(){
   var table=document.getElementById("gradetable");
@@ -34,7 +34,7 @@ function deleteRow(){
   }
 }
 function calculatePercent(rowNumber){
-  var id1='gradeNum'+rowNumber; 
+  var id1='gradeNum'+rowNumber;
   var numerator=document.getElementById(id1).value;
     console.log("id1: "+ id1);
     console.log("numerator: "+numerator);
